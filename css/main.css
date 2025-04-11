@@ -9,136 +9,185 @@
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-  font-family: 'Playfair Display SC', sans-serif; /* fonte padrao */         
-    background-color: #f1eada; /*cor do site */
-    color: #e8d9c4; /* cor letra */
-    line-height: 1.6; /* espaçamento */
+html,
+body {
+  width: 100vw; /* define a largura da página como 100% da view width */
+  min-height: 100vh; /* define a altura da página como pelo menos 100% da view heigth*/
+  font-family: 'Playfair Display SC', sans-serif; /* fonte padrao */
+  background-color: #f1eada; /*cor do site */
+  color: #e8d9c4; /* cor letra */
+  line-height: 1.6; /* espaçamento */
 }
 
+.container-geral {
+  display: flex; /* define o flexbox layout para todos os conteúdos da página */
+  flex-direction: column; /* define a direção de coluna (vertical) para todos os conteúdos da página */
+  width: 100vw;
+  height: 100vh;
+}
 
-/*--------------------------------------------------------------
-# Navmenu section
---------------------------------------------------------------*/
-.navbar {
-  position: absolute; /* Define a navbar como fixa no topo, mas não ocupa espaço na página */
-  top: 0; /* Cola no topo da tela */
-  left: 0; /* Cola no canto esquerdo */
-  width: 100%; /* Faz a navbar ocupar toda a largura da tela */
-  z-index: 1000; /* Garante que a navbar fique por cima de outros elementos */
-  font-family: 'Cinzel', serif;
+header {
   background-color: #1d1b18;
+  padding: 1rem; /* espaçamento dentro do header */
+  text-align: center; /* alinhamento central dentro do header */
 }
 
-/* Container para organizar o conteúdo dentro da navbar */
-.container {
-  display: flex; /* Faz os elementos ficarem lado a lado */
-  justify-content: space-between; /* Espaço máximo entre os elementos (logo de um lado, menu do outro) */
-  align-items: center; /* Centraliza os itens verticalmente */
-  padding: 0 5rem; /* Adiciona espaço dos lados */
-  height: 90px; /* Define a altura da navbar */
+header .site-name {
+  font-size: 1.5em;
 }
 
-.sitename {
-  font-size: 1.5rem; /* Define o tamanho da fonte */
-  font-weight: bold; /* Deixa a fonte em negrito */
-  text-transform: uppercase; /* Converte todas as letras para maiúsculas automaticamente */
-  color: #e8d9c4; /* Define a cor do texto */
+header i.material-symbols-outlined {
+  display: block;
+  padding: 1rem 0;
+  cursor: pointer;
 }
 
-/* links do menu */
-.nav-links {
-  list-style: none; /* Remove os marcadores de lista (bolinhas) */
-  display: flex; /* Coloca os links lado a lado */
-  gap: 2rem; /* Adiciona um espaçamento entre os links (2rem = aproximadamente 32px) */
+header nav {
+  display: none;
 }
 
-.nav-links a {
+header nav ul li {
+  list-style: none;
+  padding-bottom: 0.7rem;
+}
+
+header nav ul li a {
   color: #e8d9c4; /* Define a cor do texto */
   text-decoration: none; /* Remove o sublinhado dos links */
-  font-size: 1rem; /* Define o tamanho da fonte */
-  font-weight: 500; /* Deixa a fonte um pouco mais grossa, mas não tão forte quanto negrito */
 }
 
-/* Efeito ao passar o mouse sobre os links */
-.nav-links a:hover {
-  color: #a39986; /* Muda a cor do texto quando o mouse passa por cima */
+header nav ul li a:hover {
+  color: #a39986;
 }
 
-/* Linha no hover */
-.nav-links a::after {
-content: "";
-display: block;
-height: 2px;
-background-color: #55130b;
-width: 0;
-transition: width 0.4s ease;
+section.hero {
+  background-image: url(../img/hero1.jpg);
+  background-size: cover;
+  background-position: left center;
+  height: 100%;
 }
 
-.nav-links a:hover::after {
-width: 100%;
+.content {
+  padding: 2rem;
 }
 
-
-/*--------------------------------------------------------------
-# Here section
---------------------------------------------------------------*/
-.hero {
-    background-image: url('../img/hero1.jpg'); /* Define a imagem de fundo do hero */
-    background-size: cover; /* Garante que a imagem cubra todo o hero */
-    background-position: center; /* Centraliza a imagem*/
-    height: 100vh; /* Ocupa toda a telinha */
-    display: flex; /* Ativa o flexbox para alinhamento do conteúdo */
-    justify-content: flex-start; /* Alinha o conteúdo horizontalmente à esquerda */
-    align-items: center; /* Centraliza o conteúdo verticalmente */
-    text-align: left; /* Alinha o texto à esquerda */
-    padding-left: 5rem; /* Adiciona espaçamento interno na lateral esquerda */
-    text-align: left;  /*Centraliza o texto dentro do container do hero */
-    position: relative; /* Garante que elementos posicionados (como ::after) estejam em relação ao hero */
-  }
-
-  .hero-title {
-  font-size: 10rem; /* Aumenta o tamanho do título principal */
+.hero-title {
+  font-size: 3rem;
   line-height: 1.2;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
-  
-  }
-  
-  .hero::after {
-    content: ''; /* Cria um elemento vazio para a camada de sobreposição */
-    position: absolute; /* Permite que o elemento seja posicionado em relação ao hero */
-    top: 0; /* Alinha ao topo do hero */
-    left: 0; /* Alinha à lateral esquerda do hero */
-    width: 100%; /* Ocupa toda a largura do hero */
-    height: 100%; /* Ocupa toda a altura do hero */
-    z-index: 1; /* Define a ordem de empilhamento abaixo do conteúdo principal */
-  }
-  
-  .hero-content {
-    position: relative; /* Garante que o conteúdo esteja acima da camada de sobreposição */
-    z-index: 2; /* Define a ordem de empilhamento acima do ::after */
-  }
-  
-  .hero p {
-    font-size: 1.2rem; /* Define o tamanho da fonte para o parágrafo */
-    margin-bottom: 2rem; /* Espaçamento inferior do parágrafo */
-  }
-  
-  /*---------------------
-  Botão hero
-  ---------------------*/
- .botao {
-  font-family: lato,sans-serif;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  /* Define o tamanho da fonte para o parágrafo */
+  margin-bottom: 2rem;
+  /* Espaçamento inferior do parágrafo */
+}
+
+.botao {
+  font-family: lato, sans-serif;
   font-weight: bold;
   font-size: 1em;
   letter-spacing: 0.1em;
-  text-decoration: none;
   color: #cec1a8;
-  display: inline-block;
-  padding: 10px 40px 10px 40px;
-  position: relative;
+  text-decoration: none;
   border: 3px solid #cec1a8;
+  cursor: pointer;
+  padding: 12px 40px 12px 40px;
+}
+
+footer {
+  text-align: center;
+  background-color: #1d1b18;
+  padding: 0.95rem;
+}
+
+
+/* Media Queries para telas maiores */
+
+@media screen and (min-width: 992px) {
+
+  body {
+    overflow-x: hidden; /* oculta rolagem lateral */
+  }
+
+  header {
+    display: flex; /* define o flexbox para o header */
+    align-items: center; /* alinha verticalmente os conteúdos dentro do header */
+    justify-content: space-between; /* espaçamento entre os itens do header (título e navbar) */
+    padding: 0 5rem; /*espaçamento dentro do header */
+    width: 100%; /*largura de 100% da página */
+    height: 120px; /* altura do header de 90px */
+    background-color: #1d1b18; /* cor de fundo */
+    font-family: 'Cinzel', serif; /* fonte */
+  }
+  
+  header .site-name {
+    font-size: 1.5rem;
+    /* Define o tamanho da fonte */
+    font-weight: bold;
+    /* Deixa a fonte em negrito */
+    text-transform: uppercase;
+    /* Converte todas as letras para maiúsculas automaticamente */
+    color: #e8d9c4;
+    /* Define a cor do texto */
+  }
+
+  header i.material-symbols-outlined {
+    display: none; /* menu hambúrguer invisível */
+  }
+
+  header nav {
+    display: block; /* navbar visível */
+  }
+  
+  header nav ul {
+    display: flex;
+  }
+  
+  header nav ul li {
+    display: flex;
+    padding: 1rem;
+  }
+  
+  header nav ul li a:hover {
+    color: #a39986;
+  }
+  
+  header nav ul li a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #55130b;
+    width: 0;
+    transition: width 0.4s ease;
+  }
+  
+  a:hover::after {
+    width: 100%;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding: 6.5rem 0 0 5rem;
+  }
+
+  .hero-title {
+    font-size: 5rem;
+  }  
+
+  .hero p {
+    font-size: 1.2rem;
+    /* Define o tamanho da fonte para o parágrafo */
+    margin-bottom: 2rem;
+    /* Espaçamento inferior do parágrafo */
+  }
+
+  .botao {
+    width: 205px;
+  }
 }
