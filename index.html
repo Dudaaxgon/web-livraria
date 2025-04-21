@@ -3,7 +3,7 @@
   ----------------------------------------------------------->
 
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 
 <head>
   <meta charset="utf-8">
@@ -13,15 +13,14 @@
   <meta name="keywords" content="">
 
   <!-- Icon -->
-  <link rel="shortcut icon" href="img/books.png" type="image/x-icon">
+  <link rel="shortcut icon" href="img/icon2.png" type="image/x-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.cdnfonts.com/css/playfair-display-sc" rel="stylesheet"> <!-- Fonte de Textos em destaque -->
   <link href="https://fonts.cdnfonts.com/css/cinzel" rel="stylesheet"> <!-- Fonte do navbar-->
 
   <!-- Importa o ícone de hambúrguer -->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
 
   <!-- Link para os icons das redes ( esse site é otimo para icons ) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -29,7 +28,7 @@
   <!-- Main CSS File -->
   <link href="../css/main.css" rel="stylesheet">
 </head>
-
+ <!-------------------------------------------------------------------- Navbar Section -------------------------------------------------------------------------------->
 <body>
   <div class="container-geral">
     <header>
@@ -41,11 +40,15 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="servicos.html">Serviços</a></li>
-          <li><a href="Novidades.html">Novidades</a></li>
+          <li><a href="novidades.html">Novidades</a></li>
           <li><a href="contato.html">Contato</a></li>
         </ul>
       </nav>
     </header>
+
+ <!-------------------------------------------------------------------- /Navbar Section -------------------------------------------------------------------------------->
+
+ <!-------------------------------------------------------------------- Hero Section -------------------------------------------------------------------------------->
 
     <section class="hero">
       <div class="content">
@@ -54,16 +57,205 @@
           <span>ao Portal dos Livros</span>
         </h1>
         <p>Explore nosso catálogo e encontre seu próximo favorito.</p>
-        <a href="sobre.html" class="botao"> Aventurar-se</a>
+        <a href="servicos.html" class="botao"> Aventurar-se</a>
       </div>
     </section>
 
-    <footer>
-      <span>
-        Website desenvolvido por Duda, Luiza, Gaby e Leonel
+ <!-------------------------------------------------------------------- /Hero Section -------------------------------------------------------------------------------->
+  
+ <!-------------------------------------------------------------------- Sobre Section -------------------------------------------------------------------------------->
+ <section class="sobre">
+  <div class="sobre-container">
+    
+    <div class="sobre-img">
+      <img src="../static/img/livraria.jpg" alt="foto-livraria">
+    </div>
+
+    <div class="sobre-texto">
+      <h3 class="subtitulo">nossa essência</h3>
+      <h2 class="titulo">
+        "Entre estantes empoeiradas e segredos sussurrados, criamos um refúgio para os amantes da literatura."
+      </h2>
+      <p>
+        Portal dos Livros é um refúgio para almas inquietas e amantes da palavra escrita.
+        Entre sombras e páginas, cada livro revela não só uma história, mas um convite à descoberta.
+        Aqui, a leitura é uma jornada silenciosa — e transformadora.
+      </p>
+      <a href="sobre.html" class="botao-sobre">Leia mais</a>
+    </div>
+
+  </div>
+</section>
+
+ <!-------------------------------------------------------------------- /Sobre Section -------------------------------------------------------------------------------->
+
+ <!-------------------------------------------------------------------- Mais vendidos Section -------------------------------------------------------------------------------->
+  
+ <section class="best-sellers">
+  <h2>- Os favoritos da livraria -</h2>
+  <div class="carousel">
+    
+    <div class="book">
+      <img src="img/book1.jpg" alt="Capa do Livro 1">
+      <div class="book-info">
+        <p class="titulo">Entendendo Algoritmos</p>
+        <p class="autor">Aditya Y. Bhargava</p>
+        <p class="preco">R$ 73,90</p>
+      </div>
+    </div>
+
+    <div class="book">
+      <img src="img/book2.jpg" alt="Capa do Livro 2">
+      <div class="book-info">
+        <p class="titulo">Uma vida pequena</p>
+        <p class="autor">Hanya Yanagihara</p>
+        <p class="preco">R$ 90,66</p>
+      </div>
+    </div>
+
+    <div class="book">
+      <img src="img/book3.jpg" alt="Capa do Livro 3">
+      <div class="book-info">
+        <p class="titulo">Orgulho e Preconceito</p>
+        <p class="autor">Jane Austin</p>
+        <p class="preco">R$ 49,90</p>
+      </div>
+    </div>
+    
+    <div class="book">
+      <img src="img/book4.jpg" alt="Capa do Livro 4">
+      <div class="book-info">
+        <p class="titulo">Domínio de um Rei </p>
+        <p class="autor">Rina Kent</p>
+        <p class="preco">R$ 66,90</p>
+      </div>
+    </div> 
+
+    <div class="book">
+      <img src="img/book5.jpeg" alt="Capa do Livro 5">
+      <div class="book-info">
+        <p class="titulo">It: A coisa</p>
+        <p class="autor">Stephen King</p>
+        <p class="preco">R$ 89,99</p>
+      </div>
+    </div> 
+
+    <div class="book">
+      <img src="img/book6.jpg" alt="Capa do Livro 6">
+      <div class="book-info">
+        <p class="titulo">Margot mertz arruma a sua vida</p>
+        <p class="autor">Carrie McCrossen e Ian </p>
+        <p class="preco">R$ 29,90</p>
+      </div>
+    </div> 
+
+  </div>
+  </section>
+
+
+ <!-------------------------------------------------------------------- /Sobre Section -------------------------------------------------------------------------------->
+
+ <!-------------------------------------------------------------------- Frase Section --------------------------------------------------------------------------------->
+ 
+ <section class="frase">
+  <div class="container" style="text-align: center; background-color: #302d28; height: 20vh;">
+    <br>
+    <br>
+    <h2>"Livros não mudam o mundo. Quem muda o mundo são as pessoas. Os livros só mudam as pessoas."</h2>
+      <p>(Mario Quintana)</p>
+  </div>
+</section>
+
+
+ <!-------------------------------------------------------------------- /Frase Section --------------------------------------------------------------------------------->
+ 
+ <!-------------------------------------------------------------------- Categorias Section --------------------------------------------------------------------------------->
+ 
+ <section class="categorias">
+
+  <div class="caixinha">
+    <h3>BOOKS</h3>
+    <p>Descrição da categoria</p>
+    <a href="#">VIEW SELECTION ➞</a>
+  </div>
+
+  <div class="caixinha">
+    <h3>EBOOKS</h3>
+    <p>Descrição da categoria</p>
+    <a href="#">VIEW SELECTION ➞</a>
+  </div>
+
+  <div class="caixinha">
+    <h3>DVDS</h3>
+    <p>Descrição da categoria</p>
+    <a href="#">VIEW SELECTION ➞</a>
+  </div>
+
+ 
+   <br><div class="caixinha">
+    <h3>AUDIO</h3>
+    <p>Descrição da categoria</p>
+    <a href="#">VIEW SELECTION ➞</a>
+  </div>
+
+  <div class="caixinha">
+    <h3>EAUDIO</h3>
+    <p>Descrição da categoria</p>
+    <a href="#">VIEW SELECTION ➞</a>
+  </div>
+
+  <div class="caixinha">
+    <h3>MAGAZINES</h3>
+    <p>Descrição da categoria</p>
+    <a href="#">VIEW SELECTION ➞</a>
+  </div>
+</section>
+ <!-------------------------------------------------------------------- /Categorias Section --------------------------------------------------------------------------------->
+
+ <!-------------------------------------------------------------------- Footer Section --------------------------------------------------------------------------------->
+
+ <footer class="footer">
+  <div class="footer-grid">
+
+    <div>
+      <h3>Portal Dos Livros</h3>
+      <p>Espaço dedicado à literatura e inspiração.</p>
+      <div class="icons">
+        <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://x.com/?lang=pt"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div>
+      <h3>Endereço</h3>
+      <p>Rua das Letras, 123</p>
+      <p>+55 (21) 91234-5678</p>
+      <p>portaldoslivros@gmail.com</p>
+    </div>
+
+    <div>
+      <h3>Funcionamento</h3>
+      <p>Seg a Sex: 9h - 18h</p>
+      <p>Sábado: 10h - 14h</p>
+      <p>Domingo: Fechado</p>
+    </div>
+
+    <div>
+      <h3>Inscreva-se Aqui :</h3>
+      <input type="email" placeholder="Seu e-mail">
+      <button>Inscrever</button>
+    </div>
+    
+  </div>
+</footer>
+
+
+        <!--<span>
+        © 2025 Website desenvolvido por Duda, Luiza, Gaby e Leonel
       </span>
     </footer>
-  </div>
+  </div>-->
 
   <script src="script.js"></script>
 
