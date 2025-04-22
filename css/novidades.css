@@ -172,7 +172,6 @@
     max-width: 600px;
     margin: 0 auto;
     text-align: justify;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     position: relative;
   }
 
@@ -204,12 +203,16 @@
   
   .fechar-modal {
     position: absolute;
-    top: 10px;
+    top: 0px;
     right: 0px;
     font-size: 24px;
     font-weight: bold;
     color: #e8d9c4;
     cursor: pointer;
+  }
+
+  .fechar-modal:hover {
+    color: #55130b;
   }
 
   .modal-conteudo-destaque .borda-destaque {
@@ -230,5 +233,26 @@
       .card-destaque {        
         margin-bottom: 15px;
         height: 750px;
+      }
+
+      .modal-conteudo-destaque .borda-destaque .card-imagem1 {
+        background-position: center;
+        background-size: cover;
+        height: 400px;
+        width: 350px;
+      }
+
+      .modal-conteudo-destaque .borda-destaque .card-imagem2 {
+        background-position: center;
+        background-size: cover;
+        height: 400px;
+        width: 350px;
+      }
+
+      .modal-conteudo-destaque .borda-destaque .card-imagem3 {
+        background-position: center;
+        background-size: cover;
+        height: 400px;
+        width: 350px;
       }
   }
