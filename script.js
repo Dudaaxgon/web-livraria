@@ -1,3 +1,5 @@
+// MENU HAMBÚRGUER DE TODAS AS PÁGINAS
+
 function clickMenu() {
     if (menu.style.display == 'block') {
         menu.style.display = 'none';
@@ -6,15 +8,29 @@ function clickMenu() {
     }
 }
 
-// Caixinhas da section categorias
-const caixinhas = document.querySelectorAll(".caixinha");
+// CARDS/MODAL DA PÁGINA DE NOVIDADES
 
-caixinhas.forEach(function(caixinha) {
-  caixinha.addEventListener("mouseenter", function() {
-    caixinha.style.background = "#55130b";
+const botoesLeiaMais = document.querySelectorAll('.botao-destaque-leia-mais');
+const modais = document.querySelectorAll('.modal-destaque');
+const botoesFechar = document.querySelectorAll('.fechar-modal');
+
+botoesLeiaMais.forEach((botao, index) => {
+  botao.addEventListener('click', () => {
+    modais[index].style.display = 'flex';
   });
+});
 
-  caixinha.addEventListener("mouseout", function() {
-    caixinha.style.background = "#7e6d5f";
+botoesFechar.forEach((botao, index) => {
+  botao.addEventListener('click', () => {
+    modais[index].style.display = 'none';
+  });
+});
+
+// Fecha modal ao clicar fora do conteúdo
+window.addEventListener('click', (e) => {
+  modais.forEach((modal) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
   });
 });
