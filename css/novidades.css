@@ -226,6 +226,70 @@
     align-items: center;
   }
 
+  .container-novidades {
+    border: 5px inset #e8d9c4;
+    padding: 10px;
+    height: 300px;
+    display: flex;
+  }
+
+  .container-novidades h3 {
+    font-size: 1.5rem;
+    margin: 0 15px 15px 0;
+  }
+
+  #form-categoria {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    min-width: 150px;
+    padding-top: 5px;
+  }
+
+  .container-novidades .em-alta {
+    flex: 1;
+    padding: 0 0 0 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .em-alta .caixinhas-livros {
+    display: flex;
+    height: 100%;
+    padding: 15px 15px 15px 0;
+    gap: 35px;
+  }
+
+  .em-alta .caixa-livro {
+    flex: 1;
+    height: 100%;
+  }
+
+  .em-alta .caixinhas-livros .borda-destaque {
+    flex: 1;
+  }
+
+  .livro01 {
+    background-image: url(../img/one-piece-vol-103.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .livro02 {
+    background-image: url(../img/e-nao-sobrou-nenhum.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .livro03 {
+    background-image: url(../img/codigo-fonte.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
   /* Responsivo pro mobile */
 
   @media screen and (max-width: 768px) {
