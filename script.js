@@ -35,3 +35,26 @@ window.addEventListener('click', (e) => {
     }
   });
 });
+
+// Data dinâmica da página de novidades
+
+const data = new Date(); // cria uma variável para receber a instância de new Date()
+
+// Função para adicionar o "0" à frente caso o número seja menor que 10
+function adicionarZero(num) {
+    return num < 10 ? '0' + num : num;
+}
+
+// Lista dos meses
+const meses = [
+    'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+    'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
+];
+
+const dia = adicionarZero(data.getDate()); // variável para receber a data em dia
+const mes = meses[data.getMonth()]; // Usa o nome do mês
+const ano = data.getFullYear();
+
+// Formato: "XX de Mês, 2025"
+const dataFormatada = `${dia} de ${mes}, ${ano}`;
+document.getElementById('data').innerText = dataFormatada;

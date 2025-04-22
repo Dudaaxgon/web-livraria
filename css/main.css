@@ -37,7 +37,9 @@ header {
   background-color: #1d1b18; /* cor de fundo escura pra destacar o menu */
   padding: 1rem;
   text-align: center;
-  
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 /* Nome do site no topo */
@@ -84,6 +86,7 @@ section.hero {
   background-position: left center; /* posiciona a imagem */
   height: 100%; /* altura total do container */
   padding-bottom: 370px;
+  margin-top: 70px;
 }
 
 /* Conteúdo que vai dentro do hero */
@@ -136,7 +139,7 @@ section.hero {
     justify-content: space-between; /* joga o nome do site pra um lado e o menu pro outro */
     padding: 0 5rem;
     width: 100%;
-    height: 120px;
+    height: 80px;
     background-color: #1d1b18;
     font-family: 'Cinzel', serif;
   }

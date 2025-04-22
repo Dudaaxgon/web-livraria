@@ -8,6 +8,7 @@
     max-width: 1300px; /* Largura máxima de 1000px pra não ficar esticado demais */
     margin: auto; /* Centraliza a seção no meio da tela */
     border-top: 1px solid #c9bfa6; /* Linha fininha no topo como se fosse a divisão do jornal */
+    margin-top: 70px;
   }
   
   .cabecalho-novi {
@@ -41,6 +42,10 @@
   .texto-novi {
     flex: 1; /* Ocupa o mesmo espaço que a outra coluna */
     min-width: 250px; /* Garante no mínimo 250px de largura */
+  }
+
+  #data {
+    color: #e8d9c486;
   }
   
   .texto-novi h2 {
