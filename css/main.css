@@ -119,7 +119,7 @@ section.hero {
   color: #cec1a8; 
   text-decoration: none; /* Retira o sublinhado do botão */
   border: 3px solid #cec1a8; 
-  padding: 12px 40px; /* Espaço interno dentro do botão (altura e largura) */
+  padding: 12px 30px; /* Espaço interno dentro do botão (altura e largura) */
 }
 
 /*--------------------------------------------------------------
