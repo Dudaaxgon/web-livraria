@@ -520,6 +520,7 @@ section.hero {
   border-radius: 4px; /* Cantos arredondados */
   margin-top: 5px; /* Espaço acima do input */
   background: #1d1b18; 
+  color: #e4d9c4;
 }
 
 .footer button {
