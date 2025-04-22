@@ -223,7 +223,7 @@ section.hero {
 .sobre-container {
   display: grid; /* Usa o layout grid para organizar os itens */
   grid-template-columns: 1fr 1fr; /* Divide a área em duas colunas do mesmo tamanho */
-  gap: 2rem; /* Espaço entre a imagem e o texto */
+  gap: 6rem; /* Espaço entre a imagem e o texto */
   align-items: center; /* Alinha os itens verticalmente no centro */
   max-width: 1200px; /* Largura máxima da seção */
   margin: 0 auto; /* Centraliza a seção na tela */
