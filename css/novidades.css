@@ -229,7 +229,7 @@
   .container-novidades {
     border: 5px inset #e8d9c4;
     padding: 10px;
-    height: 300px;
+    height: 400px;
     display: flex;
   }
 
@@ -238,12 +238,21 @@
     margin: 0 15px 15px 0;
   }
 
+  .filtro-categoria {
+    display: flex;
+    flex-direction: column;
+  }
+
   #form-categoria {
     display: flex;
     flex-direction: column;
     width: 25%;
     min-width: 150px;
-    padding-top: 5px;
+    padding-top: 15px;
+  }
+
+  #form-categoria input {
+    cursor: pointer;
   }
 
   .container-novidades .em-alta {
@@ -299,29 +308,44 @@
         justify-content: center;
       }
 
-      .card-destaque {        
-        margin-bottom: 15px;
-        height: 750px;
-      }
+    .card-destaque {        
+      margin-bottom: 15px;
+      height: 750px;
+    }
 
-      .modal-conteudo-destaque .borda-destaque .card-imagem1 {
-        background-position: center;
-        background-size: cover;
-        height: 400px;
-        width: 350px;
-      }
+    .modal-conteudo-destaque .borda-destaque .card-imagem1 {
+      background-position: center;
+      background-size: cover;
+      height: 400px;
+      width: 350px;
+    }
 
-      .modal-conteudo-destaque .borda-destaque .card-imagem2 {
-        background-position: center;
-        background-size: cover;
-        height: 400px;
-        width: 350px;
-      }
+    .modal-conteudo-destaque .borda-destaque .card-imagem2 {
+      background-position: center;
+      background-size: cover;
+      height: 400px;
+      width: 350px;
+    }
 
-      .modal-conteudo-destaque .borda-destaque .card-imagem3 {
-        background-position: center;
-        background-size: cover;
-        height: 400px;
-        width: 350px;
-      }
+    .modal-conteudo-destaque .borda-destaque .card-imagem3 {
+      background-position: center;
+      background-size: cover;
+      height: 400px;
+      width: 350px;
+    }
+
+    .container-novidades {
+      flex-direction: column;
+      height: 1200px;
+    }
+
+    .em-alta h3 {
+      margin-top: 15px;
+      margin-left: -15px;
+    }
+
+    .caixinhas-livros {
+      display: flex;
+      flex-direction: column;
+    }
   }

@@ -25,7 +25,7 @@ body {
   display: flex; /* ativa o flexbox */
   flex-direction: column; /* deixa tudo empilhadinho verticalmente */
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 
