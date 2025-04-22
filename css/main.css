@@ -303,6 +303,7 @@ section.hero {
   display: flex; /* Coloca os itens lado a lado (horizontal) */
   overflow-x: auto; /* Permite rolar horizontalmente se tiver muitos livros */
   gap: 2rem; /* Espaço entre os livros */
+  padding-top: 2rem;
   padding-bottom: 1rem; /* Espaço abaixo do carrossel */
   scroll-behavior: smooth; /* Rolagem suavinha */
 }
