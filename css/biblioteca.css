@@ -84,12 +84,20 @@
     margin-bottom: 2rem; /* Espaço abaixo do parágrafo */
     font-family: 'Cinzel', serif;
   }
+
+  .book-info p {
+    text-align: center; /* Centraliza as descrições dos livros */
+  }
   
   /* Responsivo para dispositivos móveis */
   @media (max-width: 768px) {
-    .destaque-container {
-      grid-template-columns: 1fr; /* Em telas pequenas, coloca tudo em uma coluna */
-      text-align: center; /* Centraliza o texto na tela */
+    .titulo-bibli h1 {
+      padding-top: 50px;
+    }
+
+    .container-destaque {
+      display: flex;
+      flex-direction: column;
     }
   
     .destaque-texto {
