@@ -120,18 +120,18 @@ section.hero {
   text-decoration: none; /* Retira o sublinhado do botão */
   border: 3px solid #cec1a8; 
   padding: 12px 30px; /* Espaço interno dentro do botão (altura e largura) */
-  position: relative; /* Adicionado para conter o pseudo-elemento */
-  overflow: hidden; /* Agora funcionará corretamente */
+  position: relative; /* Adicionado para conter o pseudo-elemento ::before*/
+  overflow: hidden;
   display: inline-block; /* Para melhor comportamento do elemento a */
   background-color: transparent;
   transition: background-color .3s, color .3s;
 }
 
 .botao::before {
-  content: "";
+  content: ""; /* Para exibir o estilo de ::before */
   position: absolute;
   top: 0;
-  left: -100%;
+  left: -100%; /* Começa fora do botão (esquerda) */
   width: 100%;
   height: 100%;
   background: linear-gradient(
@@ -140,14 +140,14 @@ section.hero {
     rgba(255,255,255,.6),
     transparent
   );
-  transform: skewX(-20deg);
-  opacity: 0;
-  transition: opacity .3s;
+  transform: skewX(-20deg); /* Inclina o brilho em 20 graus */
+  opacity: 0; /* Inicialmente invisível */
+  transition: opacity .3s; /* Suaviza o aparecimento */
 }
 
 .botao:hover::before {
-  opacity: 1;
-  animation: shine 2s forwards;
+  opacity: 1; /* Torna o brilho visível */
+  animation: shine 2s forwards; /* Aciona a animação */
 }
 
 .botao:hover {
@@ -156,8 +156,8 @@ section.hero {
 }
 
 @keyframes shine {
-  0% { left: -100%; }
-  100% { left: 100%; } /* Alterado para sair completamente do botão */
+  0% { left: -100%; } /* Brilho começa fora do botão (esquerda) */
+  100% { left: 100%; } /* Brilho termina fora do botão (direita) */
 }
 
 /*--------------------------------------------------------------
