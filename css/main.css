@@ -128,7 +128,7 @@ section.hero {
 }
 
 .botao::before {
-  content: "";
+  content: ""; /* permite ao navegador renderizar o conteúdo do pseudo-elemento ::before */
   position: absolute;
   top: 0;
   left: -100%;
