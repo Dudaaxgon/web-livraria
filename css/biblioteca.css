@@ -90,7 +90,7 @@
   }
   
   /* Responsivo para dispositivos móveis */
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     .titulo-bibli h1 {
       padding-top: 50px;
     }
