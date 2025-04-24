@@ -120,6 +120,44 @@ section.hero {
   text-decoration: none; /* Retira o sublinhado do botão */
   border: 3px solid #cec1a8; 
   padding: 12px 30px; /* Espaço interno dentro do botão (altura e largura) */
+  position: relative; /* Adicionado para conter o pseudo-elemento */
+  overflow: hidden; /* Agora funcionará corretamente */
+  display: inline-block; /* Para melhor comportamento do elemento a */
+  background-color: transparent;
+  transition: background-color .3s, color .3s;
+}
+
+.botao::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.6),
+    transparent
+  );
+  transform: skewX(-20deg);
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.botao:hover::before {
+  opacity: 1;
+  animation: shine 2s forwards;
+}
+
+.botao:hover {
+  background-color: #d9cbb09d;
+  color: #1d1b18;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  100% { left: 100%; } /* Alterado para sair completamente do botão */
 }
 
 /*--------------------------------------------------------------
