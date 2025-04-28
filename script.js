@@ -57,4 +57,52 @@ const ano = data.getFullYear();
 
 // Formato: "XX de Mês, 2025"
 const dataFormatada = `${dia} de ${mes}, ${ano}`;
-document.getElementById('data').innerText = dataFormatada;
+
+const dataASerExibida = document.getElementById('data');
+if (dataASerExibida) {
+  dataASerExibida.innerText = dataFormatada;
+}
+
+// função de visualizar senha no formulário
+
+document.addEventListener('DOMContentLoaded', function() {
+  const botaoMostrarSenha = document.getElementById('botao-mostrar-senha');
+  const icone = botaoMostrarSenha.querySelector('i');
+
+  botaoMostrarSenha.addEventListener('click', function(event) {
+    event.preventDefault();
+    mostrarSenha();
+  });
+
+  function mostrarSenha() {
+    const inputSenha = document.getElementById('senha');
+
+    if (inputSenha.type === "password") {
+      inputSenha.type = "text";
+      icone.classList.remove('fa-eye');
+      icone.classList.add('fa-eye-slash');
+    } else {
+      inputSenha.type = "password";
+      icone.classList.remove('fa-eye-slash');
+      icone.classList.add('fa-eye');
+    }
+  }
+
+  const form = document.getElementById('formulario-inscricao');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o envio padrão do formulário
+
+    const email = document.getElementById('email').value;
+    const senha = document.getElementById('senha').value;
+
+    if (email.trim() === '' || senha.trim() === '') {
+      alert('Por favor, preencha todos os campos!');
+      return;
+    }
+
+    alert('Inscrição realizada com sucesso!');
+
+    form.submit(); 
+  });
+});

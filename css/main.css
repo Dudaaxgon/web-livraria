@@ -561,13 +561,40 @@ section.hero {
   color: #e4d9c4;
 }
 
-.footer button {
+.footer .campo-senha {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.footer #senha {
+  position: relative;
+}
+
+.footer #botao-mostrar-senha {
+  background-color: transparent;
+  border: none;
+  color: #e8d9c4;
+  position: absolute;
+  right: 10px;
+  top: 13px;
+  cursor: pointer;
+}
+
+.footer #botao-inscrever {
   margin-top: 10px; /* Espaço acima do botão */
   padding: 8px 12px; /* Espaço interno */
   background: #55130b;
   border: none; /* Remove a borda padrão */
   color: #e4d9c4; 
   border-radius: 4px; /* Cantos arredondados */
+  cursor: pointer;
+}
+
+.footer #botao-inscrever:hover {
+  background: #960f00;
+  box-shadow: 0px 0px 10px #960f00;
 }
 
 /* Estilo dos ícones sociais */

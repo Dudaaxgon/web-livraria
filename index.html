@@ -282,8 +282,16 @@
 
         <div>
           <h3>Inscreva-se Aqui :</h3>
-          <input type="email" placeholder="Seu e-mail">
-          <button>Inscrever</button>
+          <form id="formulario-inscricao">
+            <input type="email" id="email" placeholder="Seu e-mail" required>
+            <div class="campo-senha">
+              <input type="password" name="senha" id="senha" placeholder="Sua senha" required>
+              <button id="botao-mostrar-senha" type="button" aria-label="Mostrar ou ocultar senha">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+            <button id="botao-inscrever">Inscrever</button>
+          </form>
         </div>
 
       </div>
@@ -291,8 +299,7 @@
 
   </div> <!-- Fechamento container geral -->
 
-  <script src="script.js"></script>
-
+<script src="script.js"></script>
 </body>
 
 </html>
