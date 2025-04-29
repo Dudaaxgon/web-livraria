@@ -103,7 +103,6 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
 
-    // alert('Inscrição realizada com sucesso!');
     modal.style.display = 'flex';
   });
 
