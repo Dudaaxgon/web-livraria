@@ -89,6 +89,8 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   const form = document.getElementById('formulario-inscricao');
+  const modal = document.getElementById('modal-inscricao');
+  const botaoFecharModal = document.getElementById('fechar-modal-inscricao');
 
   form.addEventListener('submit', function(event) {
     event.preventDefault(); // Impede o envio padrão do formulário
@@ -101,8 +103,20 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
 
-    alert('Inscrição realizada com sucesso!');
+    // alert('Inscrição realizada com sucesso!');
+    modal.style.display = 'flex';
+  });
 
-    form.submit(); 
+  botaoFecharModal.addEventListener('click', function() {
+    modal.style.display = 'none';
+    
+    // Limpa o formulário
+    form.reset();
+    
+    // Voltar o ícone do olho para "mostrar senha"
+    const icone = document.getElementById('botao-mostrar-senha').querySelector('i');
+    icone.classList.remove('fa-eye-slash');
+    icone.classList.add('fa-eye');
+    document.getElementById('senha').type = "password";
   });
 });
