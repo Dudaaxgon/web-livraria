@@ -119,4 +119,31 @@ document.addEventListener('DOMContentLoaded', function() {
     icone.classList.add('fa-eye');
     document.getElementById('senha').type = "password";
   });
+
+  // Captura o formulário de contato
+  const formularioContato = document.querySelector('.contato-section form');
+  const modalContato = document.getElementById('modal-contato');
+  const botaoFecharModalContato = document.getElementById('fechar-modal-contato');
+
+  formularioContato.addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o envio tradicional
+
+    const nome = document.getElementById('nome').value;
+    const emailContato = document.getElementById('email-contato').value;
+    const mensagem = document.getElementById('mensagem').value;
+
+    if (nome.trim() === '' || emailContato.trim() === '' || mensagem.trim() === '') {
+      alert('Por favor, preencha todos os campos!');
+      return;
+    }
+
+    modalContato.style.display = 'flex';
+  });
+
+  botaoFecharModalContato.addEventListener('click', function() {
+    modalContato.style.display = 'none';
+
+    // Limpa o formulário
+    formularioContato.reset();
+  });
 });

@@ -65,7 +65,7 @@
  
            <div>
              <label for="email">E-mail:</label><br>
-             <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com"
+             <input type="email" id="email-contato" name="email" required placeholder="seuemail@exemplo.com"
                style="width: 100%; padding: 10px; background-color: #1c1c1c; border: none; border-bottom: 2px solid #e8d9c4; color: #e8d9c4;">
            </div>
  
@@ -88,12 +88,19 @@
            <a href="#" style="color: #e8d9c4; margin: 0 10px;"><i class="fab fa-twitter"></i> Twitter</a>
          </div>
        </div>
+
+       <div id="modal-contato" class="modal-inscricao" style="display: none;">
+        <div class="modal-inscricao-conteudo">
+          <p>Recebemos sua mensagem. Obrigado!</p>
+          <button id="fechar-modal-contato">Fechar</button>
+        </div>
+      </div>
      </section>
    </div>
  
    <footer class="footer">
     <div class="footer-grid">
-  
+
       <div>
         <h3>© 2025 Portal Dos Livros</h3>
         <p>Espaço dedicado à literatura e inspiração.</p>
@@ -103,27 +110,42 @@
           <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
-  
+
       <div>
         <h3>Endereço</h3>
         <p>Rua das Letras, 123</p>
         <p>+55 (21) 91234-5678</p>
         <p>portaldoslivros@gmail.com</p>
       </div>
-  
+
       <div>
         <h3>Funcionamento</h3>
         <p>Seg a Sex: 9h - 18h</p>
         <p>Sábado: 10h - 14h</p>
         <p>Domingo: Fechado</p>
       </div>
-  
+
       <div>
         <h3>Inscreva-se Aqui :</h3>
-        <input type="email" placeholder="Seu e-mail">
-        <button>Inscrever</button>
+        <form id="formulario-inscricao">
+          <input type="email" id="email" placeholder="Seu e-mail" required>
+          <div class="campo-senha">
+            <input type="password" name="senha" id="senha" placeholder="Sua senha" required>
+            <button id="botao-mostrar-senha" type="button" aria-label="Mostrar ou ocultar senha">
+              <i class="fa-solid fa-eye"></i>
+            </button>
+          </div>
+          <button id="botao-inscrever">Inscrever</button>
+        </form>
       </div>
-      
+
+      <div id="modal-inscricao" class="modal-inscricao">
+        <div class="modal-inscricao-conteudo">
+          <p>Sua inscrição foi realizada com sucesso!</p>
+          <button id="fechar-modal-inscricao">Fechar</button>
+        </div>
+      </div>
+
     </div>
   </footer>
   
