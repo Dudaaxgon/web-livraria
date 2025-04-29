@@ -760,3 +760,174 @@ section.hero {
 .imagem-novi img {
   max-width: 100%; /* A imagem nunca passa da largura do container */
 }
+
+
+/* TESTE MODAL CARRINHO */
+
+/* Estilos do Carrinho */
+.carrinho-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.carrinho-contador {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #d1a84b;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+/* Modal do Carrinho */
+.modal-carrinho {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-carrinho-conteudo {
+  background-color: #302d28;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  color: white;
+}
+
+.modal-carrinho-conteudo h2 {
+  margin-top: 0;
+  color: #d1a84b;
+}
+
+.itens-carrinho {
+  margin: 20px 0;
+}
+
+.item-carrinho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #444;
+}
+
+.item-carrinho-info {
+  flex: 1;
+}
+
+.item-carrinho-acoes {
+  display: flex;
+  align-items: center;
+}
+
+.item-carrinho-acoes button {
+  background-color: #d1a84b;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  margin: 0 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.item-carrinho-acoes button:hover {
+  background-color: #b8933a;
+}
+
+.total-carrinho {
+  font-weight: bold;
+  text-align: right;
+  margin: 20px 0;
+  font-size: 1.2em;
+}
+
+.botao-finalizar {
+  background-color: #d1a84b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1em;
+}
+
+.botao-finalizar:hover {
+  background-color: #b8933a;
+}
+
+/* Formulário de Pagamento */
+.form-pagamento {
+  display: none;
+}
+
+.form-pagamento input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background-color: #444;
+  color: white;
+}
+
+.form-pagamento label {
+  display: block;
+  margin-top: 10px;
+}
+
+.mensagem-sucesso {
+  display: none;
+  text-align: center;
+  padding: 20px;
+}
+
+.mensagem-sucesso i {
+  font-size: 3em;
+  color: #4CAF50;
+  margin-bottom: 20px;
+}
+
+/* Notificação de item adicionado */
+.notificacao-carrinho {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #d1a84b;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-out {
+  animation: fadeOut 0.5s;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(20px); }
+}
