@@ -124,11 +124,11 @@ document.addEventListener('DOMContentLoaded', function() {
       formularioContato.addEventListener('submit', function(event) {
           event.preventDefault();
           
-          const nome = document.getElementById('nome').value;
+          const nomeContato = document.getElementById('nome-contato').value;
           const emailContato = document.getElementById('email-contato').value;
-          const mensagem = document.getElementById('mensagem').value;
+          const mensagemContato = document.getElementById('mensagem-contato').value;
           
-          if (nome.trim() === '' || emailContato.trim() === '' || mensagem.trim() === '') {
+          if (nomeContato.trim() === '' || emailContato.trim() === '' || mensagemContato.trim() === '') {
               alert('Por favor, preencha todos os campos!');
               return;
           }
