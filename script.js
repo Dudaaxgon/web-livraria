@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Captura o formulário de contato
-  const formularioContato = document.querySelector('.contato-section form');
+  const formularioContato = document.getElementById('formulario-contato');
   const modalContato = document.getElementById('modal-contato');
   const botaoFecharModalContato = document.getElementById('fechar-modal-contato');
 
