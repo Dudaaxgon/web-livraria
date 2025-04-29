@@ -146,3 +146,31 @@ document.addEventListener('DOMContentLoaded', function() {
     formularioContato.reset();
   });
 });
+
+
+
+  // Seleciona todos os botões "Adicionar"
+  const botoesAdicionar = document.querySelectorAll('.botao-adicionar');
+  const modalCarrinho = document.getElementById('modal-carrinho');
+  const fecharModalCarrinho = document.getElementById('fechar-modal-carrinho');
+
+  // Para cada botão, adiciona um evento de clique
+  botoesAdicionar.forEach(botao => {
+    botao.addEventListener('click', () => {
+      modalCarrinho.style.display = 'flex'; // Mostra o modal
+    });
+  });
+
+  // Quando clicar em "Fechar", esconde o modal
+  fecharModalCarrinho.addEventListener('click', () => {
+    modalCarrinho.style.display = 'none';
+  });
+
+  // Opcional: fechar clicando fora do conteúdo do modal
+  window.addEventListener('click', (e) => {
+    if (e.target == modalCarrinho) {
+      modalCarrinho.style.display = 'none';
+    }
+  });
+
+
