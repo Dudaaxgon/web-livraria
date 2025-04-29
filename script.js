@@ -188,6 +188,8 @@ document.addEventListener('DOMContentLoaded', function() {
           adicionarAoCarrinho({ titulo, autor, preco, imagemSrc });
       });
   });
+
+  carregarCarrinho();
   
   // Função para adicionar item ao carrinho
   function adicionarAoCarrinho(livro) {
@@ -201,7 +203,21 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       
       atualizarCarrinhoUI();
+      salvarCarrinho();
       mostrarNotificacao('Livro adicionado ao carrinho!');
+  }
+
+    // Funções para salvar e carregar o carrinho no localStorage
+  function salvarCarrinho() {
+      localStorage.setItem('carrinho', JSON.stringify(carrinho));
+  }
+
+  function carregarCarrinho() {
+      const carrinhoSalvo = localStorage.getItem('carrinho');
+      if (carrinhoSalvo) {
+          carrinho = JSON.parse(carrinhoSalvo);
+          atualizarCarrinhoUI();
+      }
   }
   
   // Função para mostrar notificação
@@ -287,6 +303,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function aumentarQuantidade(index) {
       carrinho[index].quantidade += 1;
       atualizarCarrinhoUI();
+      salvarCarrinho();
   }
   
   function diminuirQuantidade(index) {
@@ -296,11 +313,13 @@ document.addEventListener('DOMContentLoaded', function() {
           carrinho.splice(index, 1);
       }
       atualizarCarrinhoUI();
+      salvarCarrinho();
   }
   
   function removerItem(index) {
       carrinho.splice(index, 1);
       atualizarCarrinhoUI();
+      salvarCarrinho();
   }
   
   // Botão Finalizar Compra
